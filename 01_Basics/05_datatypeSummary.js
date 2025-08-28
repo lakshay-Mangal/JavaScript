@@ -27,3 +27,21 @@ console.log(typeof myObj)
 }
 console.log(myFun)
 myFun();
+
+//-------------------------------------------------------------------
+//Stack (primitive) heap(non primitive)
+let num1=5;
+let num2=10;
+num2=15
+console.log(num1); console.log(num2);
+
+let user1 ={
+    name: "Lakshay Mangal",
+    email: "mangal@xyz.com"
+}
+let user2 = user1
+
+user2.name= "AKSHAY"
+
+console.log(user1)
+
