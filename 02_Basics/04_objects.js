@@ -56,3 +56,27 @@ console.log(Object.keys(tinderUser));
 console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 console.log(tinderUser.hasOwnProperty('value'));
+
+ const course = {
+    courseName :"Javascript",
+    coursePrice: 1934,
+    courseInstructor: "FreeCodeCamp"
+ }
+//destructuring an obkect
+ const {courseInstructor : instructor}= course
+ console.log(instructor);
+
+//  const navbar = ({company}) => {
+
+//  }
+//  navbar(company ="lakshay") 
+
+// {
+//   "name" : "Lakshya",
+//   "courseName" : "JavaScript",
+//   "price" : "Free"
+// }
+[
+  {},
+  {},
+]
