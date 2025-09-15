@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <button onclick="addDiv(colorArray,nameArray)" style="margin:20px; padding:10px; font-size:16px;">
+        Generate Divs
+
+    </button>
+</body>
+<script>
+     let colorArray= ["red","green","blue","orange"];
+     let nameArray =["Lakshya", "Akshay","kshya","shya"]
+    function addDiv(colors,names){
+        let limit = Math.min(colors.length, names.length);
+        for(let i=0;i< limit;i++) {
+            const div= document.createElement('div');
+        div.className = 'main';
+        div.id= Math.round(Math.random()*10+1);
+        div.setAttribute("title","Practice");
+        //div.textContent= `Hello ${name}`;
+        const addText= document.createTextNode(`Hello ${names[i]}`);
+        div.appendChild(addText);
+
+        div.style.backgroundColor= colors[i];
+        div.style.padding="12px";
+        div.style.margin="6px";
+        document.body.appendChild(div);
+        }
+    }
+    addDiv(colorArray, nameArray);
+
+</script>
+</html>
