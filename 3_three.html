@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Test</title>
+</head>
+<body>
+    <h1> Lakshay Mangal</h1>
+    <button id="stop"> Stop</button>
+    <button id="start"> Start</button>
+</body>
+
+
+<script> 
+
+const sayHello =function(){
+    console.log("Hello World");
+    
+}   
+ let count =1;
+
+let firstSet = null;
+document.querySelector("#start").addEventListener('click',()=>{
+            if(firstSet){ clearInterval(firstSet)};
+     firstSet=setInterval((str) => {
+    console.log(`Lakshay ${str} ${count} ${Date.now()}`)
+    count++;
+}, 1000,"hi");
+    console.log("started");
+})
+document.querySelector('#stop').addEventListener('click',()=>{
+    clearInterval(firstSet);
+    console.log("Stopped");
+    
+})
+</script>
+</html>
