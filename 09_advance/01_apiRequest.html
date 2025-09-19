@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api-Request</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi distinctio ipsum alias nihil repellat vitae nisi exercitationem asperiores molestias! Neque et tempore minima quibusdam adipisci ab animi nam sit recusandae?
+     Possimus ipsum eveniet obcaecati quam cupiditate natus assumenda ex culpa? Quia fugiat a amet deleniti aut, doloremque ipsum atque illo id quo tempore dolore architecto blanditiis dignissimos iusto temporibus ad!
+     Ipsum suscipit magni voluptas repudiandae modi esse laboriosam quas et reiciendis dolorum praesentium deserunt vel aliquid, maiores vero culpa, eaque quod autem consequuntur adipisci. Quos voluptates illo est consectetur nulla.
+     Rerum totam omnis repudiandae molestiae. Sit animi nam dolores magni eius illo recusandae veritatis tenetur soluta eveniet tempora nulla saepe vel architecto exercitationem nesciunt illum, earum dolor incidunt asperiores autem.
+     Commodi, quos. Distinctio neque iusto corporis quam, quod officiis architecto voluptatibus harum, dolorem excepturi voluptatum eum autem ullam deleniti blanditiis. Aperiam enim corporis officia qui ipsam, maiores excepturi totam culpa.
+     Maxime quia a, saepe labore harum quis tempora obcaecati, explicabo corrupti sit debitis alias reprehenderit possimus. Suscipit, omnis repudiandae. Ullam eligendi sequi eaque vel aliquid ad, consequuntur accusantium repellat ut</p>
+</body>
+<script>
+    const reqUrl="https://api.github.com/users/lakshay-mangal"
+  const xhr=  new XMLHttpRequest();
+  xhr.open('GET',reqUrl)
+  xhr.onreadystatechange= function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState===4){
+        const data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        
+        console.log(data.followers);
+    }
+  }
+//   console.log(xhr.readyState);
+  xhr.send();
+</script>
+</html>
